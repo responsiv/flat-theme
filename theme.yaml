@@ -1,4 +1,5 @@
-name: Flat
-description: Flat UI theme
-author: RainLab
-authorUrl: 'http://github.com/rainlab'
+name: Flat UI
+code: Flat
+description: A theme that uses a Flat user-interface and has no dependencies on others plugins.
+author: Responsiv Internet
+authorUrl: 'http://github.com/responsiv'
