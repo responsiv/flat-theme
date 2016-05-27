@@ -4,9 +4,12 @@ description = "Default layout"
 <html>
     <head>
         <title>Flat UI - {{ this.page.title }}</title>
-        <meta name="author" content="October CMS">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}" />
+        <meta name="author" content="OctoberCMS">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}">
         {% styles %}
         <link href="{{ [
             'assets/css/theme.css'
@@ -19,7 +22,6 @@ description = "Default layout"
             <!-- Nav -->
             {% partial "nav" %}
         </header>
-
 
         <!-- Content -->
         <div id="layout-content">
@@ -57,7 +59,7 @@ description = "Default layout"
             'assets/vendor/flat-ui/js/flatui-radio.js',
             'assets/vendor/flat-ui/js/jquery.tagsinput.js',
             'assets/vendor/flat-ui/js/jquery.placeholder.js',
-            'assets/javascript/app.js',
+            'assets/javascript/app.js'
         ]|theme }}"></script>
         {% framework extras %}
         {% scripts %}
