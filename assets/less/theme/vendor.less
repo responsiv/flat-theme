@@ -8,9 +8,10 @@
 // Bootstrap
 //
 
-// Reset
+// Reset and dependencies
 @import "../../vendor/bootstrap/less/normalize";
 @import "../../vendor/bootstrap/less/print";
+@import "../../vendor/bootstrap/less/glyphicons";
 
 // Core CSS
 @import "../../vendor/bootstrap/less/scaffolding";
@@ -40,6 +41,7 @@
 @import "../../vendor/bootstrap/less/media";
 @import "../../vendor/bootstrap/less/list-group";
 @import "../../vendor/bootstrap/less/panels";
+@import "../../vendor/bootstrap/less/responsive-embed";
 @import "../../vendor/bootstrap/less/wells";
 @import "../../vendor/bootstrap/less/close";
 
@@ -57,35 +59,49 @@
 // Font Awesome
 //
 
-@import "../../vendor/font-awesome/less/path";
-@import "../../vendor/font-awesome/less/core";
-@import "../../vendor/font-awesome/less/bootstrap";
-@import "../../vendor/font-awesome/less/extras";
-@import "../../vendor/font-awesome/less/icons";
+@import "../../vendor/font-awesome/less/font-awesome";
 
 //
 // Flat UI
 //
-@import "../../vendor/flat-ui/less/controls/code";
-@import "../../vendor/flat-ui/less/controls/thumbnails";
-@import "../../vendor/flat-ui/less/controls/buttons";
-@import "../../vendor/flat-ui/less/controls/button-groups";
-@import "../../vendor/flat-ui/less/controls/caret";
-@import "../../vendor/flat-ui/less/controls/select";
-@import "../../vendor/flat-ui/less/controls/forms";
-@import "../../vendor/flat-ui/less/controls/input-icons";
-@import "../../vendor/flat-ui/less/controls/input-groups";
-@import "../../vendor/flat-ui/less/controls/checkbox-and-radio";
-@import "../../vendor/flat-ui/less/controls/navbar";
-@import "../../vendor/flat-ui/less/controls/tagsinput";
-@import "../../vendor/flat-ui/less/controls/typeahead";
-@import "../../vendor/flat-ui/less/controls/progress-bars";
-@import "../../vendor/flat-ui/less/controls/pager";
-@import "../../vendor/flat-ui/less/controls/pagination";
-@import "../../vendor/flat-ui/less/controls/tooltip";
-@import "../../vendor/flat-ui/less/controls/dropdown";
-@import "../../vendor/flat-ui/less/controls/switch";
-@import "../../vendor/flat-ui/less/controls/share";
-@import "../../vendor/flat-ui/less/controls/palette";
 
-@import "../../vendor/flat-ui/less/font";
+// Loading custom fonts
+@import "../../vendor/flat-ui/less/modules/local-fonts";
+@import "../../vendor/flat-ui/less/modules/glyphicons";
+
+// Modules
+@import "../../vendor/flat-ui/less/modules/scaffolding";
+@import "../../vendor/flat-ui/less/modules/type";
+@import "../../vendor/flat-ui/less/modules/code";
+@import "../../vendor/flat-ui/less/modules/thumbnails";
+@import "../../vendor/flat-ui/less/modules/buttons";
+@import "../../vendor/flat-ui/less/modules/button-groups";
+@import "../../vendor/flat-ui/less/modules/forms";
+@import "../../vendor/flat-ui/less/modules/input-groups";
+@import "../../vendor/flat-ui/less/modules/radiocheck";
+@import "../../vendor/flat-ui/less/modules/tagsinput";
+@import "../../vendor/flat-ui/less/modules/typeahead";
+@import "../../vendor/flat-ui/less/modules/progress-bars";
+@import "../../vendor/flat-ui/less/modules/slider";
+@import "../../vendor/flat-ui/less/modules/pager";
+@import "../../vendor/flat-ui/less/modules/pagination";
+@import "../../vendor/flat-ui/less/modules/tooltip";
+@import "../../vendor/flat-ui/less/modules/dropdowns";
+@import "../../vendor/flat-ui/less/modules/select";
+@import "../../vendor/flat-ui/less/modules/tiles";
+@import "../../vendor/flat-ui/less/modules/navbar";
+@import "../../vendor/flat-ui/less/modules/switch";
+@import "../../vendor/flat-ui/less/modules/share";
+@import "../../vendor/flat-ui/less/modules/video";
+@import "../../vendor/flat-ui/less/modules/todo-list";
+
+// Examples
+@import "../../vendor/flat-ui/less/modules/palette";
+@import "../../vendor/flat-ui/less/modules/login";
+@import "../../vendor/flat-ui/less/modules/footer";
+
+// Spaces
+@import "../../vendor/flat-ui/less/spaces";
+
+//Print styles
+@import "../../vendor/flat-ui/less/modules/print";
