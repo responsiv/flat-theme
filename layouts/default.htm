@@ -3,6 +3,7 @@ description = "Default layout"
 <!DOCTYPE html>
 <html>
     <head>
+    	<meta charset="UTF-8">
         <title>Flat UI - {{ this.page.title }}</title>
         <meta name="title" content="{{ this.page.meta_title }}">
         <meta name="description" content="{{ this.page.meta_description }}">
@@ -12,7 +13,7 @@ description = "Default layout"
         <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}">
         {% styles %}
         <link href="{{ [
-            'assets/css/theme.css'
+            'assets/less/theme.less'
         ]|theme }}" rel="stylesheet">
     </head>
     <body class="page-{{ this.page.id }} layout-{{ this.layout.id }}">
