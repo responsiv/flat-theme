@@ -15,6 +15,14 @@ description = "Default layout"
         <link href="{{ [
             'assets/less/theme.less'
         ]|theme }}" rel="stylesheet">
+        
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+			<script src="{{ [
+				'assets/javascript/html5shiv.js',
+				'assets/javascript/respond.min.js',
+			]|theme }}"></script>
+		<![endif]-->
     </head>
     <body class="page-{{ this.page.id }} layout-{{ this.layout.id }}">
 
@@ -41,7 +49,7 @@ description = "Default layout"
 
         <!-- Scripts -->
         <script src="{{ [
-            'assets/javascript/jquery.js',
+            'assets/javascript/jquery.min.js',
             'assets/vendor/bootstrap/js/transition.js',
             'assets/vendor/bootstrap/js/alert.js',
             'assets/vendor/bootstrap/js/button.js',
@@ -54,14 +62,13 @@ description = "Default layout"
             'assets/vendor/bootstrap/js/scrollspy.js',
             'assets/vendor/bootstrap/js/tab.js',
             'assets/vendor/bootstrap/js/affix.js',
-            'assets/vendor/flat-ui/js/bootstrap-select.js',
-            'assets/vendor/flat-ui/js/bootstrap-switch.js',
-            'assets/vendor/flat-ui/js/flatui-checkbox.js',
-            'assets/vendor/flat-ui/js/flatui-radio.js',
-            'assets/vendor/flat-ui/js/jquery.tagsinput.js',
-            'assets/vendor/flat-ui/js/jquery.placeholder.js',
+            'assets/vendor/flat-ui/js/video.js',
+            'assets/vendor/flat-ui/js/flat-ui.js',
             'assets/javascript/app.js'
         ]|theme }}"></script>
+        <script>
+        	videojs.options.flash.swf = "{{ 'assets/vendor/flat-ui/js/video-js.swf'|theme }}";
+        </script>
         {% framework extras %}
         {% scripts %}
 
