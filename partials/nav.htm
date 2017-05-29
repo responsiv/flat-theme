@@ -44,6 +44,8 @@
 %}
 
 {% macro render_menu(links) %}
+    {% import _self as subnav %}
+
     {% for code, link in links %}
         <li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
             <a
@@ -57,7 +59,7 @@
             {% if link.sublinks %}
                 <span class="dropdown-arrow"></span>
                 <ul class="dropdown-menu">
-                    {{ _self.render_menu(link.sublinks) }}
+                    {{ subnav.render_menu(link.sublinks) }}
                 </ul>
             {% endif %}
         </li>
