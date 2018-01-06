@@ -6,12 +6,12 @@
         'pages': {
             name: 'Pages',
             sublinks: {
-                'about':         ['samples/about', 'About Us'],
-                'contact':       ['samples/contact', 'Contact Us'],
-                'pricing-table': ['samples/pricing-table', 'Pricing Table'],
-                'services':      ['samples/services', 'Services'],
-                'signin':        ['samples/signin', 'Sign In'],
-                'register':      ['samples/register', 'Register'],
+                'about':         ['about', 'About Us'],
+                'contact':       ['contact', 'Contact Us'],
+                'pricing-table': ['pricing-table', 'Pricing Table'],
+                'services':      ['services', 'Services'],
+                'signin':        ['signin', 'Sign In'],
+                'register':      ['register', 'Register'],
                 'error':         ['error', 'Error Page'],
                 '404':           ['404', '404 Page'],
             },
@@ -19,21 +19,21 @@
         'portfolio': {
             name: 'Portfolio',
             sublinks: {
-                'portfolio': ['portfolio/portfolio', 'Portfolio'],
+                'portfolio': ['portfolio', 'Portfolio'],
                 'project': ['portfolio/project', 'Project'],
             },
         },
         'blog': {
             name: 'Blog',
             sublinks: {
-                'blog': ['blog/blog', 'Blog'],
+                'blog': ['blog', 'Blog'],
                 'post': ['blog/post', 'Blog Post'],
             },
         },
         'shop': {
             name: 'Shop',
             sublinks: {
-                'shop': ['shop/shop', 'Shop'],
+                'shop': ['shop', 'Shop'],
                 'product': ['shop/product', 'Product'],
                 'cart': ['shop/cart', 'Cart'],
             },
@@ -59,7 +59,9 @@
             {% if link.sublinks %}
                 <span class="dropdown-arrow"></span>
                 <ul class="dropdown-menu">
-                    {{ subnav.render_menu(link.sublinks) }}
+                    {% for sub in link.sublinks %}
+                        <li><a href="/{{sub[0]}}">{{sub[1]}}</a></li>
+                    {% endfor %}
                 </ul>
             {% endif %}
         </li>
